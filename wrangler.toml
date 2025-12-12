@@ -1,0 +1,7 @@
+name = "worker-site1"
+main = "_worker.js"
+compatibility_date = "2025-12-12"
+
+[assets]
+directory = "Decoretelire"
+

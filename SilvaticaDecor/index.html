@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silvatica Decor | Professional Home Décor Consulting</title>
+    <meta name="description" content="Silvatica Decor offers expert home décor consulting, transforming living spaces, kitchens, bathrooms, and more with nature-inspired design solutions.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="home décor, interior design, design consulting, living room design, kitchen redesign, bathroom remodeling, home styling">
+    <meta name="author" content="Silvatica Decor">
+    <meta property="og:title" content="Silvatica Decor | Professional Home Décor Consulting">
+    <meta property="og:description" content="Transform your living spaces with nature-inspired design solutions from Silvatica Decor.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Ads Compliance -->
+    <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXX">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDummyKeyReplaceWithYourOwn&callback=initMap" async defer></script>
+    
+    <style>
+        /* CSS Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #2a5c4c;
+            --secondary-color: #d4af8c;
+            --accent-color: #8a7f6d;
+            --light-color: #f9f7f3;
+            --dark-color: #1a1a1a;
+            --text-color: #333;
+            --text-light: #666;
+            --transition: all 0.3s ease;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --border-radius: 8px;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        section {
+            padding: 5rem 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .logo span {
+            color: var(--secondary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-top: 0;
+            padding: 0;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1615529328331-f8917597711f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--light-color);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .about-image img:hover {
+            transform: scale(1.03);
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.05);
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .service-content h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            background-color: var(--light-color);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            height: 280px;
+            cursor: pointer;
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 1.5rem;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1100;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: var(--border-radius);
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .lightbox-nav:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .lightbox-prev {
+            left: 20px;
+        }
+        
+        .lightbox-next {
+            right: 20px;
+        }
+        
+        /* Testimonials */
+        .testimonials-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial-slide {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            display: none;
+        }
+        
+        .testimonial-slide.active {
+            display: block;
+            animation: fadeIn 0.8s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 0.2rem;
+        }
+        
+        .author-info p {
+            margin-bottom: 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .testimonial-dot.active {
+            background-color: var(--primary-color);
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            padding: 3rem;
+        }
+        
+        .contact-form h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.9rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .map-container {
+            height: 100%;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        #map {
+            height: 100%;
+            width: 100%;
+            min-height: 400px;
+        }
+        
+        /* Policy Pages */
+        .policy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem;
+        }
+        
+        .policy-header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .policy-content {
+            background-color: white;
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .policy-content h3 {
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .policy-content ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .policy-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .policy-content .last-updated {
+            font-style: italic;
+            color: var(--text-light);
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding-top: 4rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo span {
+            color: var(--secondary-color);
+        }
+        
+        .footer-about p {
+            color: #aaa;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-heading {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.7rem;
+        }
+        
+        .footer-heading:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+        
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            color: #aaa;
+        }
+        
+        .contact-info i {
+            margin-right: 1rem;
+            color: var(--secondary-color);
+            margin-top: 0.2rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem 0;
+            text-align: center;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .legal-links a {
+            color: #aaa;
+            transition: var(--transition);
+        }
+        
+        .legal-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                padding: 2rem;
+            }
+            
+            .map-container {
+                height: 400px;
+            }
+            
+            .policy-content {
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .header-container {
+                padding: 1rem 1.5rem;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            nav ul.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .policy-container {
+                padding: 5rem 1.5rem 3rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-slide {
+                padding: 1.5rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            
+            .legal-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .policy-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">Silvatica<span>Decor</span></a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <div id="contentContainer">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Transform Your Space with Nature-Inspired Design</h1>
+                <p>Silvatica Decor brings the beauty of nature into your home with expert décor consulting for every room, creating harmonious living spaces that reflect your unique style.</p>
+                <a href="#contact" class="btn">Book a Consultation</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>About Silvatica Decor</h2>
+                        <p>Founded on the principle that our living spaces should reflect the tranquility and beauty of the natural world, Silvatica Decor brings over a decade of expertise in home décor consulting. Our name, derived from the Latin word for "woodland," embodies our commitment to creating spaces that feel both organic and refined.</p>
+                        <p>We believe that every home tells a story, and our role is to help you write yours through thoughtful design choices, sustainable materials, and personalized solutions that balance aesthetics with functionality.</p>
+                        <p>Our team of certified designers specializes in transforming all types of spaces—from cozy living rooms to functional kitchens, serene bedrooms to luxurious bathrooms—into environments that nurture and inspire.</p>
+                        <a href="#services" class="btn btn-secondary">Explore Our Services</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Silvatica Decor designer working on a living room project">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Design Services</h2>
+                    <p>Comprehensive décor solutions for every space in your home</p>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Living Room Design">
+                        </div>
+                        <div class="service-content">
+                            <h3>Living Room Design</h3>
+                            <p>Create inviting, functional living spaces with optimal furniture arrangement, color schemes, lighting, and accessories that reflect your lifestyle.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Kitchen Redesign">
+                        </div>
+                        <div class="service-content">
+                            <h3>Kitchen Redesign</h3>
+                            <p>Transform your kitchen into a functional and beautiful heart of the home with smart storage solutions, lighting, and layout optimization.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Bathroom Remodeling">
+                        </div>
+                        <div class="service-content">
+                            <h3>Bathroom Remodeling</h3>
+                            <p>Design serene, spa-like bathrooms with efficient layouts, appropriate materials, and fixtures that combine luxury with practicality.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 4 -->
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Bedroom Styling">
+                        </div>
+                        <div class="service-content">
+                            <h3>Bedroom Styling</h3>
+                            <p>Create personal sanctuaries with calming color palettes, comfortable layouts, and storage solutions that promote rest and relaxation.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 5 -->
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Home Office Design">
+                        </div>
+                        <div class="service-content">
+                            <h3>Home Office Design</h3>
+                            <p>Design productive workspaces that balance professionalism with comfort, incorporating ergonomic furniture and effective organization.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Service 6 -->
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Outdoor Space Design">
+                        </div>
+                        <div class="service-content">
+                            <h3>Outdoor Space Design</h3>
+                            <p>Extend your living area outdoors with thoughtfully designed patios, decks, and gardens that blend seamlessly with your interior style.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Portfolio</h2>
+                    <p>Explore our recent projects showcasing transformations across different spaces</p>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <!-- Portfolio Item 1 -->
+                    <div class="portfolio-item" data-index="0">
+                        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Living Room Transformation">
+                        <div class="portfolio-overlay">
+                            <h3>Modern Living Room</h3>
+                            <p>Contemporary design with natural materials</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 2 -->
+                    <div class="portfolio-item" data-index="1">
+                        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Kitchen Remodel Project">
+                        <div class="portfolio-overlay">
+                            <h3>Kitchen Remodel</h3>
+                            <p>Functional layout with elegant finishes</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 3 -->
+                    <div class="portfolio-item" data-index="2">
+                        <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Spa Bathroom Design">
+                        <div class="portfolio-overlay">
+                            <h3>Spa Bathroom</h3>
+                            <p>Luxurious retreat with natural stone</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 4 -->
+                    <div class="portfolio-item" data-index="3">
+                        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Master Bedroom Makeover">
+                        <div class="portfolio-overlay">
+                            <h3>Master Bedroom</h3>
+                            <p>Calming sanctuary with custom storage</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 5 -->
+                    <div class="portfolio-item" data-index="4">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Home Office Design">
+                        <div class="portfolio-overlay">
+                            <h3>Home Office</h3>
+                            <p>Productive workspace with natural light</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 6 -->
+                    <div class="portfolio-item" data-index="5">
+                        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Dining Room Transformation">
+                        <div class="portfolio-overlay">
+                            <h3>Dining Room</h3>
+                            <p>Elegant space for entertaining</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 7 -->
+                    <div class="portfolio-item" data-index="6">
+                        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Outdoor Patio Design">
+                        <div class="portfolio-overlay">
+                            <h3>Outdoor Patio</h3>
+                            <p>Seamless indoor-outdoor living space</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Portfolio Item 8 -->
+                    <div class="portfolio-item" data-index="7">
+                        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Entryway Design">
+                        <div class="portfolio-overlay">
+                            <h3>Entryway</h3>
+                            <p>Welcoming first impression</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lightboxClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav lightbox-next" id="lightboxNext">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="lightbox-content">
+                <img class="lightbox-img" src="" alt="">
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Client Testimonials</h2>
+                    <p>Hear what our clients have to say about their Silvatica Decor experience</p>
+                </div>
+                
+                <div class="testimonials-container">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-text">
+                            <p>"Silvatica Decor transformed our outdated living room into a serene sanctuary. Their attention to detail and understanding of our style preferences was exceptional. We couldn't be happier with the results!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Living Room Redesign</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-text">
+                            <p>"Our kitchen was completely transformed by Silvatica Decor. They created a functional yet beautiful space that has become the heart of our home. The team was professional, creative, and a pleasure to work with."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Michael Chen">
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <p>Kitchen Remodel</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-text">
+                            <p>"I was hesitant about hiring a decor consultant, but Silvatica Decor exceeded all expectations. Our master bathroom now feels like a luxury spa retreat. Their expertise in materials and layout made all the difference."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Amanda Rodriguez">
+                            <div class="author-info">
+                                <h4>Amanda Rodriguez</h4>
+                                <p>Bathroom Transformation</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-text">
+                            <p>"Working from home became a pleasure after Silvatica Decor designed my home office. They perfectly balanced aesthetics with functionality, creating a space that inspires productivity while being visually stunning."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="David Williams">
+                            <div class="author-info">
+                                <h4>David Williams</h4>
+                                <p>Home Office Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-text">
+                            <p>"The outdoor living space Silvatica Decor created for us is absolutely magical. They understood exactly how we wanted to use the space and transformed our backyard into an extension of our home."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jennifer Lee">
+                            <div class="author-info">
+                                <h4>Jennifer Lee</h4>
+                                <p>Outdoor Space Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-text">
+                            <p>"Silvatica Decor helped us design our entire home, and the results are breathtaking. Each room flows seamlessly into the next while maintaining its unique character. Their vision and execution are unparalleled."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Robert Thompson">
+                            <div class="author-info">
+                                <h4>Robert Thompson</h4>
+                                <p>Whole Home Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial Navigation Dots -->
+                    <div class="testimonial-nav">
+                        <span class="testimonial-dot active" data-slide="0"></span>
+                        <span class="testimonial-dot" data-slide="1"></span>
+                        <span class="testimonial-dot" data-slide="2"></span>
+                        <span class="testimonial-dot" data-slide="3"></span>
+                        <span class="testimonial-dot" data-slide="4"></span>
+                        <span class="testimonial-dot" data-slide="5"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>Ready to transform your space? Get in touch for a consultation</p>
+                </div>
+                
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <h2>Send a Message</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service">Service Interested In</label>
+                                <select id="service" class="form-control">
+                                    <option value="">Select a service</option>
+                                    <option value="living-room">Living Room Design</option>
+                                    <option value="kitchen">Kitchen Redesign</option>
+                                    <option value="bathroom">Bathroom Remodeling</option>
+                                    <option value="bedroom">Bedroom Styling</option>
+                                    <option value="home-office">Home Office Design</option>
+                                    <option value="outdoor">Outdoor Space Design</option>
+                                    <option value="full-home">Full Home Consultation</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Project Details *</label>
+                                <textarea id="message" class="form-control" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="map-container">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Policy Pages (hidden by default) -->
+    <div id="policyPages" style="display: none;">
+        <!-- Privacy Policy -->
+        <div id="privacyPolicy" class="policy-container">
+            <div class="policy-header">
+                <h1>Privacy Policy</h1>
+                <p>Last Updated: June 15, 2023</p>
+            </div>
+            <div class="policy-content">
+                <p>Silvatica Decor ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website silvaticadecor.com.</p>
+                
+                <h3>Information We Collect</h3>
+                <p>We may collect personal information that you voluntarily provide to us when you:</p>
+                <ul>
+                    <li>Register on our website</li>
+                    <li>Express interest in obtaining information about us or our products and services</li>
+                    <li>Participate in activities on the website</li>
+                    <li>Contact us</li>
+                </ul>
+                <p>The personal information we collect may include:</p>
+                <ul>
+                    <li>Name and contact information (email address, phone number, mailing address)</li>
+                    <li>Demographic information (postal code, preferences)</li>
+                    <li>Payment information (credit card numbers, billing address)</li>
+                    <li>Project details and design preferences</li>
+                </ul>
+                
+                <h3>How We Use Your Information</h3>
+                <p>We use the information we collect to:</p>
+                <ul>
+                    <li>Provide, operate, and maintain our website and services</li>
+                    <li>Process your transactions and send related information</li>
+                    <li>Send you marketing and promotional communications</li>
+                    <li>Respond to your inquiries and provide customer support</li>
+                    <li>Improve our website and services</li>
+                    <li>Prevent fraudulent transactions and monitor against theft</li>
+                </ul>
+                
+                <h3>Information Sharing</h3>
+                <p>We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties except:</p>
+                <ul>
+                    <li>Trusted third parties who assist us in operating our website, conducting our business, or servicing you</li>
+                    <li>When we believe release is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property, or safety</li>
+                </ul>
+                
+                <h3>Data Security</h3>
+                <p>We implement appropriate technical and organizational security measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure.</p>
+                
+                <h3>Your Rights</h3>
+                <p>Depending on your location, you may have the right to:</p>
+                <ul>
+                    <li>Access the personal information we hold about you</li>
+                    <li>Request correction of inaccurate personal information</li>
+                    <li>Request deletion of your personal information</li>
+                    <li>Object to processing of your personal information</li>
+                    <li>Request restriction of processing your personal information</li>
+                    <li>Request transfer of your personal information</li>
+                    <li>Withdraw consent at any time</li>
+                </ul>
+                
+                <h3>Cookies and Tracking Technologies</h3>
+                <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</p>
+                
+                <h3>Third-Party Links</h3>
+                <p>Our website may contain links to third-party websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites.</p>
+                
+                <h3>Changes to This Privacy Policy</h3>
+                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+                
+                <h3>Contact Us</h3>
+                <p>If you have questions or concerns about this Privacy Policy, please contact us at:</p>
+                <p>Silvatica Decor<br>
+                123 Forest Avenue, Suite 101<br>
+                New York, NY 10001<br>
+                Email: privacy@silvaticadecor.com<br>
+                Phone: (555) 123-4567</p>
+                
+                <p class="last-updated">This Privacy Policy was last updated on June 15, 2023.</p>
+            </div>
+        </div>
+        
+        <!-- Terms of Service -->
+        <div id="termsOfService" class="policy-container">
+            <div class="policy-header">
+                <h1>Terms of Service</h1>
+                <p>Last Updated: June 15, 2023</p>
+            </div>
+            <div class="policy-content">
+                <p>Welcome to Silvatica Decor. These Terms of Service ("Terms") govern your use of our website and services. By accessing or using our services, you agree to be bound by these Terms.</p>
+                
+                <h3>1. Services Provided</h3>
+                <p>Silvatica Decor provides interior design consulting services, including but not limited to:</p>
+                <ul>
+                    <li>Home décor consultations</li>
+                    <li>Space planning and design</li>
+                    <li>Color scheme development</li>
+                    <li>Furniture and accessory selection</li>
+                    <li>Project management services</li>
+                </ul>
+                
+                <h3>2. Client Responsibilities</h3>
+                <p>As a client, you agree to:</p>
+                <ul>
+                    <li>Provide accurate and complete information about your project</li>
+                    <li>Make timely decisions regarding design elements</li>
+                    <li>Provide access to the project site as needed</li>
+                    <li>Make payments according to the agreed schedule</li>
+                    <li>Communicate clearly and promptly with our team</li>
+                </ul>
+                
+                <h3>3. Fees and Payments</h3>
+                <p>Our fees are based on the scope of services provided. We require:</p>
+                <ul>
+                    <li>A 50% deposit to begin work on any project</li>
+                    <li>Balance payment upon project completion</li>
+                    <li>Additional fees for changes to the original scope</li>
+                    <li>Payment for products and materials as they are ordered</li>
+                </ul>
+                <p>All payments are non-refundable once work has commenced.</p>
+                
+                <h3>4. Intellectual Property</h3>
+                <p>All design concepts, drawings, and specifications created by Silvatica Decor remain our intellectual property until full payment is received. Upon final payment, clients receive a limited license to use the designs for their personal residential purposes.</p>
+                
+                <h3>5. Limitation of Liability</h3>
+                <p>Silvatica Decor shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services. Our total liability for any claim shall not exceed the total amount paid by you for the specific service giving rise to the claim.</p>
+                
+                <h3>6. Termination</h3>
+                <p>Either party may terminate services with written notice. In the event of termination by the client, Silvatica Decor will be compensated for all work completed up to the termination date.</p>
+                
+                <h3>7. Dispute Resolution</h3>
+                <p>Any disputes arising from these Terms shall be resolved through mediation in New York County, New York. If mediation fails, disputes shall be resolved through binding arbitration.</p>
+                
+                <h3>8. Governing Law</h3>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the State of New York.</p>
+                
+                <h3>9. Changes to Terms</h3>
+                <p>We reserve the right to modify these Terms at any time. We will provide notice of significant changes through our website or direct communication.</p>
+                
+                <h3>10. Contact Information</h3>
+                <p>For questions about these Terms, please contact us at:</p>
+                <p>Silvatica Decor<br>
+                123 Forest Avenue, Suite 101<br>
+                New York, NY 10001<br>
+                Email: legal@silvaticadecor.com<br>
+                Phone: (555) 123-4567</p>
+                
+                <p class="last-updated">These Terms of Service were last updated on June 15, 2023.</p>
+            </div>
+        </div>
+        
+        <!-- Cookie Policy -->
+        <div id="cookiePolicy" class="policy-container">
+            <div class="policy-header">
+                <h1>Cookie Policy</h1>
+                <p>Last Updated: June 15, 2023</p>
+            </div>
+            <div class="policy-content">
+                <p>This Cookie Policy explains how Silvatica Decor uses cookies and similar technologies to recognize you when you visit our website. It explains what these technologies are and why we use them, as well as your rights to control our use of them.</p>
+                
+                <h3>What Are Cookies?</h3>
+                <p>Cookies are small data files that are placed on your computer or mobile device when you visit a website. Cookies are widely used by website owners to make their websites work, or to work more efficiently, as well as to provide reporting information.</p>
+                
+                <h3>Why Do We Use Cookies?</h3>
+                <p>We use first-party and third-party cookies for several reasons. Some cookies are required for technical reasons for our website to operate, and we refer to these as "essential" or "strictly necessary" cookies. Other cookies enable us to track and target the interests of our users to enhance the experience on our website.</p>
+                
+                <h3>Types of Cookies We Use</h3>
+                <p><strong>Essential Cookies:</strong> These cookies are necessary for the website to function and cannot be switched off in our systems.</p>
+                <p><strong>Performance Cookies:</strong> These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.</p>
+                <p><strong>Functional Cookies:</strong> These cookies enable the website to provide enhanced functionality and personalization.</p>
+                <p><strong>Targeting Cookies:</strong> These cookies may be set through our site by our advertising partners to build a profile of your interests.</p>
+                
+                <h3>How to Control Cookies</h3>
+                <p>You can set or amend your web browser controls to accept or refuse cookies. If you choose to reject cookies, you may still use our website though your access to some functionality and areas may be restricted.</p>
+                <p>Most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set and how to manage and delete them, visit <a href="http://www.allaboutcookies.org" target="_blank">www.allaboutcookies.org</a>.</p>
+                
+                <h3>Specific Cookies We Use</h3>
+                <p>Here is a list of the main cookies we use and what we use them for:</p>
+                <ul>
+                    <li><strong>session_id:</strong> Essential cookie that keeps you logged in during your visit</li>
+                    <li><strong>google_analytics:</strong> Tracks website usage and performance</li>
+                    <li><strong>facebook_pixel:</strong> Allows us to measure the effectiveness of our Facebook advertising</li>
+                    <li><strong>preferences:</strong> Remembers your site preferences and settings</li>
+                </ul>
+                
+                <h3>Changes to This Cookie Policy</h3>
+                <p>We may update this Cookie Policy from time to time to reflect changes to the cookies we use or for other operational, legal, or regulatory reasons. Please revisit this Cookie Policy regularly to stay informed about our use of cookies.</p>
+                
+                <h3>Contact Us</h3>
+                <p>If you have any questions about our use of cookies, please contact us at:</p>
+                <p>Silvatica Decor<br>
+                123 Forest Avenue, Suite 101<br>
+                New York, NY 10001<br>
+                Email: privacy@silvaticadecor.com<br>
+                Phone: (555) 123-4567</p>
+                
+                <p class="last-updated">This Cookie Policy was last updated on June 15, 2023.</p>
+            </div>
+        </div>
+        
+        <!-- Accessibility Statement -->
+        <div id="accessibilityStatement" class="policy-container">
+            <div class="policy-header">
+                <h1>Accessibility Statement</h1>
+                <p>Last Updated: June 15, 2023</p>
+            </div>
+            <div class="policy-content">
+                <p>Silvatica Decor is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.</p>
+                
+                <h3>Conformance Status</h3>
+                <p>The Web Content Accessibility Guidelines (WCAG) defines requirements for designers and developers to improve accessibility for people with disabilities. We aim to conform to WCAG 2.1 Level AA standards. This means that the content should be:</p>
+                <ul>
+                    <li>Perceivable - Information and user interface components must be presentable to users in ways they can perceive</li>
+                    <li>Operable - User interface components and navigation must be operable</li>
+                    <li>Understandable - Information and the operation of the user interface must be understandable</li>
+                    <li>Robust - Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies</li>
+                </ul>
+                
+                <h3>Accessibility Features</h3>
+                <p>Our website includes the following accessibility features:</p>
+                <ul>
+                    <li>Alternative text for images</li>
+                    <li>Keyboard navigation support</li>
+                    <li>Clear and consistent navigation</li>
+                    <li>Resizable text that doesn't break the layout</li>
+                    <li>Sufficient color contrast</li>
+                    <li>Descriptive link text</li>
+                    <li>Accessible forms with labels</li>
+                </ul>
+                
+                <h3>Areas for Improvement</h3>
+                <p>We are aware that some areas of our website need improvement to achieve full accessibility. We are actively working to address these issues, including:</p>
+                <ul>
+                    <li>Improving video captions</li>
+                    <li>Enhancing screen reader compatibility</li>
+                    <li>Optimizing complex interactive elements</li>
+                </ul>
+                
+                <h3>Feedback and Contact</h3>
+                <p>We welcome your feedback on the accessibility of our website. Please let us know if you encounter accessibility barriers:</p>
+                <p>Silvatica Decor<br>
+                123 Forest Avenue, Suite 101<br>
+                New York, NY 10001<br>
+                Email: accessibility@silvaticadecor.com<br>
+                Phone: (555) 123-4567</p>
+                <p>We try to respond to feedback within 5 business days.</p>
+                
+                <h3>Technical Specifications</h3>
+                <p>Accessibility of our website relies on the following technologies to work with the particular combination of web browser and any assistive technologies or plugins installed on your computer:</p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <p>These technologies are relied upon for conformance with the accessibility standards used.</p>
+                
+                <h3>Assessment Approach</h3>
+                <p>Silvatica Decor assesses the accessibility of our website through the following approaches:</p>
+                <ul>
+                    <li>Self-evaluation</li>
+                    <li>External evaluation by accessibility experts</li>
+                    <li>Continuous monitoring and testing</li>
+                </ul>
+                
+                <h3>Formal Complaints</h3>
+                <p>If you wish to file a formal complaint about the accessibility of our website, please contact us in writing at the address above. We will acknowledge your complaint within 5 business days and provide a substantive response within 30 days.</p>
+                
+                <p class="last-updated">This Accessibility Statement was last updated on June 15, 2023.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">Silvatica<span>Decor</span></div>
+                    <p>Bringing nature-inspired design solutions to homes since 2012. We transform living spaces into harmonious environments that reflect your unique style and connection to the natural world.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-houzz"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Design Studio</strong><br>
+                                123 Forest Avenue, Suite 101<br>
+                                New York, NY 10001
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone:</strong><br>
+                                (555) 123-4567
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong><br>
+                                info@silvaticadecor.com
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Business Hours:</strong><br>
+                                Mon-Fri: 9am-6pm<br>
+                                Sat: 10am-4pm
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Silvatica Decor. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#" onclick="showPolicy('privacyPolicy')">Privacy Policy</a>
+                    <a href="#" onclick="showPolicy('termsOfService')">Terms of Service</a>
+                    <a href="#" onclick="showPolicy('cookiePolicy')">Cookie Policy</a>
+                    <a href="#" onclick="showPolicy('accessibilityStatement')">Accessibility Statement</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Google Map
+        function initMap() {
+            // Replace with your actual Google Maps API key
+            const apiKey = 'AIzaSyDummyKeyReplaceWithYourOwn';
+            
+            // If no API key is provided, show placeholder
+            if (apiKey.includes('DummyKey')) {
+                document.getElementById('map').innerHTML = `
+                    <div style="height: 100%; background-color: #f5f5f5; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #666; padding: 2rem; text-align: center;">
+                        <i class="fas fa-map-marker-alt" style="font-size: 3rem; margin-bottom: 1rem; color: var(--primary-color);"></i>
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Silvatica Decor Location</h3>
+                        <p><strong>Address:</strong> 123 Forest Avenue, Suite 101, New York, NY 10001</p>
+                        <p>To enable interactive Google Maps, please add your API key to the script tag in the head section.</p>
+                        <p style="font-size: 0.9rem; margin-top: 1rem; color: #999;">Get a Google Maps API key from <a href="https://developers.google.com/maps/documentation/javascript/get-api-key" target="_blank" style="color: var(--primary-color);">Google Cloud Console</a></p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Create a map centered on New York
+            const map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 40.7128, lng: -74.0060 },
+                zoom: 14,
+                styles: [
+                    {
+                        "featureType": "all",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#f5f5f5"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "all",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#616161"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#757575"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#e5e5e5"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#ffffff"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#9e9e9e"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#c9c9c9"
+                            }
+                        ]
+                    }
+                ]
+            });
+            
+            // Add a marker for Silvatica Decor
+            const marker = new google.maps.Marker({
+                position: { lat: 40.7128, lng: -74.0060 },
+                map: map,
+                title: 'Silvatica Decor',
+                icon: {
+                    url: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png'
+                }
+            });
+            
+            // Add info window
+            const infoWindow = new google.maps.InfoWindow({
+                content: `
+                    <div style="padding: 1rem;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Silvatica Decor</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Address:</strong> 123 Forest Avenue, Suite 101</p>
+                        <p style="margin-bottom: 0.5rem;">New York, NY 10001</p>
+                        <p style="margin-bottom: 0;"><strong>Phone:</strong> (555) 123-4567</p>
+                    </div>
+                `
+            });
+            
+            marker.addListener('click', () => {
+                infoWindow.open(map, marker);
+            });
+        }
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainMenu = document.getElementById('mainMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Testimonial Carousel
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        let currentSlide = 0;
+        
+        function showSlide(n) {
+            // Hide all slides
+            testimonialSlides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Remove active class from all dots
+            testimonialDots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            // Show the selected slide and activate corresponding dot
+            currentSlide = (n + testimonialSlides.length) % testimonialSlides.length;
+            testimonialSlides[currentSlide].classList.add('active');
+            testimonialDots[currentSlide].classList.add('active');
+        }
+        
+        // Add click events to dots
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+        
+        // Auto-rotate testimonials every 5 seconds
+        setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+        
+        // Portfolio Lightbox
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.querySelector('.lightbox-img');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        
+        let currentImageIndex = 0;
+        const portfolioImages = [
+            'https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+            'https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+            'https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+            'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+            'https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+            'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+            'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
+            'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80'
+        ];
+        
+        // Open lightbox when clicking on portfolio item
+        portfolioItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentImageIndex = index;
+                lightboxImg.src = portfolioImages[currentImageIndex];
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+        });
+        
+        // Close lightbox
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Navigate lightbox
+        lightboxPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex - 1 + portfolioImages.length) % portfolioImages.length;
+            lightboxImg.src = portfolioImages[currentImageIndex];
+        });
+        
+        lightboxNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex + 1) % portfolioImages.length;
+            lightboxImg.src = portfolioImages[currentImageIndex];
+        });
+        
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            
+            // Show success message
+            alert(`Thank you, ${name}! Your consultation request has been submitted. We'll contact you at ${email} within 24 hours to discuss your ${service} project.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+        
+        // Policy Page Functions
+        function showPolicy(policyId) {
+            // Hide main content
+            document.getElementById('contentContainer').style.display = 'none';
+            document.getElementById('policyPages').style.display = 'block';
+            
+            // Hide all policy pages
+            document.querySelectorAll('#policyPages > div').forEach(div => {
+                div.style.display = 'none';
+            });
+            
+            // Show selected policy
+            document.getElementById(policyId).style.display = 'block';
+            
+            // Update footer links to go back to main site
+            const footerLinks = document.querySelectorAll('.footer-links a, .legal-links a');
+            footerLinks.forEach(link => {
+                if (link.textContent.includes('Policy') || link.textContent.includes('Terms') || link.textContent.includes('Accessibility')) {
+                    link.onclick = function(e) {
+                        e.preventDefault();
+                        const policyType = this.textContent.toLowerCase();
+                        if (policyType.includes('privacy')) showPolicy('privacyPolicy');
+                        if (policyType.includes('terms')) showPolicy('termsOfService');
+                        if (policyType.includes('cookie')) showPolicy('cookiePolicy');
+                        if (policyType.includes('accessibility')) showPolicy('accessibilityStatement');
+                    };
+                } else {
+                    link.onclick = function() {
+                        // Show main content
+                        document.getElementById('contentContainer').style.display = 'block';
+                        document.getElementById('policyPages').style.display = 'none';
+                        
+                        // Scroll to section
+                        const sectionId = this.getAttribute('href').substring(1);
+                        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+                    };
+                }
+            });
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Add back to home button functionality for policy pages
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('logo') || e.target.closest('.logo')) {
+                // Show main content
+                document.getElementById('contentContainer').style.display = 'block';
+                document.getElementById('policyPages').style.display = 'none';
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            }
+        });
+        
+        // Initialize map when page loads
+        window.addEventListener('load', initMap);
+    </script>
+</body>
+</html>
